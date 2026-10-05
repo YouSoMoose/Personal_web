@@ -1,0 +1,7 @@
+{
+  "name": "akhil-personal-website",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.js"
+  }
+}
