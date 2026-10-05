@@ -1,6 +1,6 @@
 # Akhil Khanna Tumati
 
-Personal website: https://yousomoose.github.io/
+Personal website: https://akhil-tumati.github.io/
 
 ## Files
 
@@ -20,5 +20,6 @@ No packages or build step are required.
 ## Publishing
 
 GitHub Pages serves the `main` branch from its root directory. The repository
-is named `YouSoMoose.github.io`, so the website lives at the account's home URL
+is named `akhil-tumati.github.io`, so the website lives at the account's home URL
 rather than a project subdirectory.
+
