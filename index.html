@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-layout="Studio">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f4ee">
   <meta name="description" content="I'm Akhil Tumati. A student at TAMS exploring microbiology, mechanical design, and code. Here are a few things I've been working on.">
-  <title>Akhil Tumati — a little about me</title>
+  <title>Akhil Khanna Tumati — a little about me</title>
   <link id="site-icon" rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23365d7e'/%3E%3Ctext x='11' y='43' font-family='Georgia' font-size='30' fill='%23f5f4ee'%3Eat%3C/text%3E%3C/svg%3E">
   <style>
     :root { --paper: #f5f4ee; --ink: #293744; --muted: #626b73; --line: #d5dce0; --accent: #365d7e; --soft: #e5ebef; }
@@ -108,14 +108,103 @@
       .contact h2 { font-size: 37px; } footer { flex-wrap: wrap; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    /* Each design changes the page's layout, typography, surfaces, and spacing. */
+    .brand { font: 700 29px/1 'Segoe UI', sans-serif; letter-spacing: -2px; }
+    .color-button { min-height: 40px; }
+    .header-right { gap: 22px; }
+    .outside { margin-top: 0; padding: 60px 0; }
+    .outside .eyebrow { margin-bottom: 10px; color: var(--muted); }
+    .experience { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; counter-reset: experience; }
+    .experience li { margin: 0; padding: 25px; border: 1px solid var(--line); border-radius: 12px; font-size: 14px; counter-increment: experience; }
+    .experience li::before { content: '0' counter(experience); display: block; font: 11px/1.5 'Courier New', monospace; color: var(--accent); margin-bottom: 20px; }
+    .experience strong { font-size: 18px; margin-bottom: 8px; }
+    [data-layout="Studio"] body { font-family: 'Segoe UI', Arial, sans-serif; }
+    [data-layout="Studio"] h1 { font-family: 'Segoe UI', Arial, sans-serif; font-size: clamp(52px, 5.8vw, 75px); font-weight: 650; letter-spacing: -4px; line-height: 1.07; }
+    [data-layout="Studio"] h1 em { font-style: normal; font-weight: 650; }
+    [data-layout="Studio"] h2 { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 600; font-size: 34px; }
+    [data-layout="Studio"] .hero { gap: 48px; padding: 74px 0; }
+    [data-layout="Studio"] figure { transform: none; border-radius: 100px 100px 16px 16px; padding: 12px; background: var(--soft); max-width: 330px; }
+    [data-layout="Studio"] figure img { border-radius: 90px 90px 9px 9px; height: 340px; }
+    [data-layout="Studio"] figcaption { font: 11px/1.5 'Segoe UI', sans-serif; padding: 14px 0 3px; }
+    [data-layout="Studio"] .button { border-radius: 30px; }
+    [data-layout="Studio"] .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    [data-layout="Studio"] .project { display: flex; flex-direction: column; padding: 25px; background: var(--soft); border: none; border-radius: 12px; gap: 17px; }
+    [data-layout="Studio"] .project h3 { font-size: 21px; font-weight: 600; }
+    [data-layout="Studio"] .project-meta { flex-direction: row; align-items: center; margin-top: auto; padding-top: 15px; flex-wrap: wrap; }
+    [data-layout="Studio"] .tag { padding: 0; border: none; }
+    [data-layout="Studio"] .contact { background: var(--soft); margin: 40px 0 0; padding: 55px 25px; border-radius: 16px; border: none; }
+    [data-layout="Journal"] .brand { font: italic 34px/1 Georgia, serif; letter-spacing: -2px; }
+    [data-layout="Journal"] .experience li { border-radius: 0; border-width: 1px 0 0; padding: 24px 0; }
+    [data-layout="Journal"] .experience { column-gap: 40px; }
+    [data-layout="Journal"] .experience strong { font: 400 24px/1.3 Georgia, serif; }
+    [data-layout="Terminal"] { --paper: #10171c; --ink: #e5edf2; --muted: #acbac4; --line: #354550; --soft: #1a252d; }
+    [data-layout="Terminal"][data-color="Blue"], [data-layout="Terminal"]:not([data-color]) { --accent: #91c5ed; }
+    [data-layout="Terminal"][data-color="Purple"] { --accent: #d3b3f0; }
+    [data-layout="Terminal"][data-color="Terracotta"] { --accent: #f4b191; }
+    [data-layout="Terminal"][data-color="Charcoal"] { --accent: #d2dce3; }
+    [data-layout="Terminal"][data-color="Green"] { --accent: #a7d6a6; }
+    [data-layout="Terminal"] body { font-family: 'Courier New', monospace; }
+    [data-layout="Terminal"] .wrap { width: min(1140px, calc(100% - 96px)); }
+    [data-layout="Terminal"] h1, [data-layout="Terminal"] h2, [data-layout="Terminal"] h3, [data-layout="Terminal"] .brand { font-family: 'Courier New', monospace; }
+    [data-layout="Terminal"] h1 { font-size: clamp(44px, 5.5vw, 66px); font-weight: 700; letter-spacing: -3px; }
+    [data-layout="Terminal"] h1 em { font-style: normal; font-weight: 700; }
+    [data-layout="Terminal"] .hero { grid-template-columns: 1fr 240px; gap: 55px; padding: 60px 0; }
+    [data-layout="Terminal"] figure { transform: none; padding: 8px; background: var(--soft); border-radius: 0; }
+    [data-layout="Terminal"] figure img { height: 260px; filter: grayscale(1); }
+    [data-layout="Terminal"] figcaption { font: 11px/1.5 'Courier New', monospace; padding: 10px 0 2px; }
+    [data-layout="Terminal"] .button { background: var(--accent); color: var(--paper); border-radius: 0; }
+    [data-layout="Terminal"] .interest-strip { justify-content: flex-start; gap: 32px; }
+    [data-layout="Terminal"] .interest-strip span::before { content: '> '; color: var(--accent); }
+    [data-layout="Terminal"] .project { grid-template-columns: 35px 1fr 155px; padding: 28px 20px; border: 1px solid var(--line); margin-bottom: 14px; background: var(--soft); }
+    [data-layout="Terminal"] .about-grid { grid-template-columns: 1fr; gap: 30px; }
+    [data-layout="Terminal"] .about-copy { max-width: 800px; border-left: 2px solid var(--accent); padding-left: 25px; }
+    [data-layout="Terminal"] .skills span, [data-layout="Terminal"] .tag, [data-layout="Terminal"] .color-button { border-radius: 0; }
+    [data-layout="Terminal"] .experience { display: block; border-left: 1px solid var(--accent); padding-left: 25px; }
+    [data-layout="Terminal"] .experience li { position: relative; margin: 0 0 28px; border: none; padding: 0; max-width: 720px; }
+    [data-layout="Terminal"] .experience li::before { content: '+'; position: absolute; left: -31px; top: 0; background: var(--paper); }
+    [data-layout="Terminal"] .contact { text-align: left; }
+    @media (max-width: 900px) {
+      [data-layout="Studio"] .project-grid { grid-template-columns: 1fr; }
+      [data-layout="Studio"] .project { gap: 12px; }
+      .header-right { flex-wrap: wrap; justify-content: flex-end; }
+    }
+    @media (max-width: 700px) {
+      .wrap, [data-layout="Terminal"] .wrap { width: calc(100% - 40px); }
+      .header-right { justify-content: space-between; }
+      .appearance-controls { flex-wrap: wrap; }
+      .experience { grid-template-columns: 1fr; }
+      .experience li { padding: 22px; }
+      .outside { padding: 40px 0; }
+      [data-layout="Studio"] .hero, [data-layout="Terminal"] .hero { grid-template-columns: 1fr; gap: 32px; padding: 45px 0; }
+      [data-layout="Studio"] h1 { font-size: clamp(42px, 11vw, 57px); letter-spacing: -2px; }
+      [data-layout="Terminal"] h1 { font-size: clamp(36px, 9vw, 49px); letter-spacing: -2px; }
+      [data-layout="Studio"] figure, [data-layout="Terminal"] figure { justify-self: start; margin-left: 0; width: 230px; }
+      [data-layout="Studio"] figure img { height: 250px; }
+      [data-layout="Terminal"] .project { grid-template-columns: 25px 1fr; gap: 12px; padding: 20px 15px; }
+      [data-layout="Terminal"] .project-meta { grid-column: 2; flex-direction: row; flex-wrap: wrap; }
+      [data-layout="Terminal"] .interest-strip { gap: 12px 20px; }
+      [data-layout="Studio"] h2, [data-layout="Terminal"] h2 { font-size: 29px; }
+      [data-layout="Studio"] .contact h2 { font-size: 32px; }
+      [data-layout="Terminal"] .contact h2 { font-size: 30px; }
+    }
+
+
+    .wrap { position: relative; z-index: 1; }
+    .fireflies { display: none; position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+    [data-layout="Journal"] .fireflies { display: block; }
+    .fireflies i { position: absolute; left: var(--x); top: var(--y); width: 4px; height: 4px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 9px 3px var(--soft); opacity: .2; animation: drift var(--duration) ease-in-out var(--delay) infinite alternate; }
+    @keyframes drift { 0% { transform: translate(0, 0); opacity: .08; } 35% { opacity: .4; } 65% { opacity: .14; } 100% { transform: translate(35px, -55px); opacity: .3; } }
+    @media (prefers-reduced-motion: reduce) { .fireflies i { animation: none; opacity: .15; } }
   </style>
 </head>
 <body>
+  <div class="fireflies" aria-hidden="true"><i style="--x:6%;--y:15%;--duration:21s;--delay:-4s"></i><i style="--x:91%;--y:10%;--duration:25s;--delay:-11s"></i><i style="--x:13%;--y:47%;--duration:28s;--delay:-8s"></i><i style="--x:84%;--y:34%;--duration:23s;--delay:-16s"></i><i style="--x:4%;--y:73%;--duration:31s;--delay:-2s"></i><i style="--x:95%;--y:81%;--duration:26s;--delay:-19s"></i><i style="--x:24%;--y:89%;--duration:30s;--delay:-14s"></i><i style="--x:73%;--y:92%;--duration:24s;--delay:-6s"></i><i style="--x:40%;--y:8%;--duration:29s;--delay:-20s"></i><i style="--x:63%;--y:56%;--duration:33s;--delay:-9s"></i><i style="--x:28%;--y:29%;--duration:26s;--delay:-17s"></i><i style="--x:81%;--y:66%;--duration:32s;--delay:-23s"></i></div>
   <a class="skip" href="#main">Skip to content</a>
   <div class="wrap">
     <header>
-      <a class="brand" id="name-mark" data-style="Full name" href="#" aria-label="Akhil Tumati home">Akhil Tumati</a>
-      <div class="header-right"><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a><a href="#contact">Say hi ↗</a></nav><div class="appearance-controls"><button class="color-button" id="color-toggle" type="button" title="Switch color palette" aria-label="Switch color palette. Current color: Blue">Blue ↻</button><details class="style-picker"><summary>Style ▾</summary><div class="style-panel"><label for="name-style">Choose a name style</label><select id="name-style"><option>Full name</option><option>First name</option><option>Initials</option><option>Lowercase</option><option>Monogram</option></select><p>Try a few. Your choice updates the name and tab icon, and stays saved in this browser.</p></div></details></div><span class="sr-only" id="color-status" role="status"></span></div>
+      <a class="brand" id="name-mark" href="#" aria-label="Akhil Khanna Tumati home">akt.</a>
+      <div class="header-right"><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a><a href="#contact">Say hi ↗</a></nav><div class="appearance-controls"><button class="color-button" id="color-toggle" type="button" title="Switch color palette" aria-label="Switch color palette. Current color: Blue">Blue ↻</button><button class="color-button" id="layout-toggle" type="button" title="Cycle between Studio, Journal, and Terminal designs" aria-label="Switch website design. Current design: Studio">Style: Studio ↻</button></div><span class="sr-only" id="color-status" role="status"></span></div>
     </header>
     <main id="main">
       <div class="hero">
@@ -125,15 +214,15 @@
           <p class="intro">I'm a student at TAMS, spending my time between microbiology, mechanical design, and code. I like making things I can build, test, and learn from.</p>
           <div class="hero-links"><a class="button" href="#work">A few things I've made ↓</a><a class="text-link" href="https://github.com/YouSoMoose" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
         </div>
-        <figure><img src="portrait.webp" alt="Akhil Tumati" width="284" height="305"><figcaption>Akhil Tumati — that's me.</figcaption></figure>
+        <figure><img src="portrait.webp" alt="Akhil Tumati" width="284" height="305"><figcaption>Akhil Khanna Tumati — that's me.</figcaption></figure>
       </div>
       <div class="interest-strip"><span>Biology</span><span>Mechanical design</span><span>A bit of code</span><span>Always something to learn ↗</span></div>
       <section id="work" aria-labelledby="work-title">
         <div class="section-heading"><h2 id="work-title">Things I've worked on</h2><span class="aside-label">A few projects, on and off screen.</span></div>
-        <article class="project"><span class="number" aria-hidden="true">01</span><div><h3>ModAnatomy</h3><p>I lead CAD and mechanical design for models of the human body. My main project is a manually actuated heart, using pistons, tubing, and one-way valves to make cardiac mechanics easier to see.</p></div><div class="project-meta"><span class="tag">Design & engineering</span><a href="https://project-modanatomy.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Visit ModAnatomy">Visit project ↗</a></div></article>
+        <div class="project-grid"><article class="project"><span class="number" aria-hidden="true">01</span><div><h3>ModAnatomy</h3><p>I lead CAD and mechanical design for models of the human body. My main project is a manually actuated heart, using pistons, tubing, and one-way valves to make cardiac mechanics easier to see.</p></div><div class="project-meta"><span class="tag">Design & engineering</span><a href="https://project-modanatomy.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Visit ModAnatomy">Visit project ↗</a></div></article>
         <article class="project"><span class="number" aria-hidden="true">02</span><div><h3>UNT Grades</h3><p>A site I co-developed to help students explore historical UNT course and instructor grade distributions before registering.</p></div><div class="project-meta"><span class="tag">Web development</span><a href="https://untgrades.app" target="_blank" rel="noopener noreferrer" aria-label="Visit UNT Grades">Visit project ↗</a></div></article>
         <article class="project"><span class="number" aria-hidden="true">03</span><div><h3>Circular Economy Conference</h3><p>I helped build the event's app and website, and worked on venue selection, presenter recruitment, and company outreach.</p></div><div class="project-meta"><span class="tag">Code & coordination</span><a href="https://github.com/ethossustainability/Conference" target="_blank" rel="noopener noreferrer" aria-label="View Ethos conference website source on GitHub">View source ↗</a></div></article>
-        <p class="github-note">And some smaller experiments, like <a href="https://github.com/YouSoMoose/Practice" target="_blank" rel="noopener noreferrer">a little game to practice coding ↗</a>.</p>
+        </div><p class="github-note">And some smaller experiments, like <a href="https://github.com/YouSoMoose/Practice" target="_blank" rel="noopener noreferrer">a little game to practice coding ↗</a>.</p>
       </section>
       <section id="about" aria-labelledby="about-title">
         <div class="about-grid">
@@ -143,68 +232,51 @@
             <p>I'm a senior at the Texas Academy of Mathematics and Science. In Dr. Rohan Balakrishnan's lab at the University of North Texas, I study fungi and bacteria and contribute to ongoing microbiology research.</p>
             <p>I like the overlap between biology and engineering: things you can build, test, and watch fail in ways that teach you something. Lately, I've also been interested in how AI could help with microbiology and biotech.</p>
             <div class="skills" aria-label="Tools and interests"><span>Fusion 360 / CAD</span><span>Microbiology</span><span>Python</span><span>C / C++</span><span>Java</span><span>HTML / CSS / React</span></div>
-            <div class="outside"><h3>Outside the lab & the laptop</h3><ul class="experience"><li><strong>Parkland Hospital</strong>Volunteering in Guest Services and the MRI Center, helping patients find their appointments.</li><li><strong>The Colony Public Library</strong>250+ volunteer hours shelving materials and running activities for kids. Recipient of the James W. Althus Volunteer of the Year Award.</li><li><strong>Civil Air Patrol</strong>Cadet Technical Sergeant, mentoring junior cadets on drill and uniform standards. General Emergency Services certified.</li><li><strong>TAMS AV</strong>Technical lead for backstage and stage setup at performances and club events.</li></ul></div>
+
           </div>
         </div>
       </section>
+            <section class="outside" id="experience" aria-labelledby="experience-title"><div class="section-heading"><div><p class="eyebrow">Community & leadership</p><h2 id="experience-title">Beyond my projects</h2></div><p class="aside-label">A few other places I spend my time.</p></div><ul class="experience"><li><strong>Parkland Hospital</strong>Volunteering in Guest Services and the MRI Center, helping patients find their appointments.</li><li><strong>The Colony Public Library</strong>250+ volunteer hours shelving materials and running activities for kids. Recipient of the James W. Althus Volunteer of the Year Award.</li><li><strong>Civil Air Patrol</strong>Cadet Technical Sergeant, mentoring junior cadets on drill and uniform standards. General Emergency Services certified.</li><li><strong>TAMS AV</strong>Technical lead for backstage and stage setup at performances and club events.</li></ul></section>
       <section class="contact" id="contact" aria-labelledby="contact-title"><div class="eyebrow">Keep in touch</div><h2 id="contact-title">Got something in mind?</h2><p>A project, a question, or just a hello. I'd love to hear it.</p><a class="email" href="mailto:akhil.tumati@gmail.com">akhil.tumati@gmail.com ↗</a></section>
     </main>
-    <footer><span>© 2026 Akhil Tumati · Thanks for stopping by.</span><div><a href="https://github.com/YouSoMoose" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/akhil-tumati/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#">Back to top ↑</a></div></footer>
+    <footer><span>© 2026 Akhil Khanna Tumati · Thanks for stopping by.</span><div><a href="https://github.com/YouSoMoose" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/akhil-tumati/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#">Back to top ↑</a></div></footer>
   </div>
 <script>
-    (() => {
-      const colors = ['Blue', 'Purple', 'Terracotta', 'Charcoal', 'Green'];
-      const root = document.documentElement;
-      const button = document.getElementById('color-toggle');
-      const status = document.getElementById('color-status');
-      let current = 'Blue';
-      const mark = document.getElementById('name-mark');
-      const select = document.getElementById('name-style');
-      const icon = document.getElementById('site-icon');
-      const styles = { 'Full name': ['Akhil Tumati', 'A'], 'First name': ['Akhil.', 'A.'], 'Initials': ['AT', 'AT'], 'Lowercase': ['akhil.', 'a.'], 'Monogram': ['AT', 'AT'] };
-      let nameStyle = 'Full name';
-      function updateIcon() {
-        const accent = getComputedStyle(root).getPropertyValue('--accent').trim();
-        const symbol = styles[nameStyle][1];
-        const round = nameStyle === 'Monogram' ? 32 : 12;
-        const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="' + round + '" fill="' + accent + '"/><text x="32" y="43" text-anchor="middle" font-family="Georgia,serif" font-size="32" fill="#f5f4ee">' + symbol + '</text></svg>';
-        icon.href = 'data:image/svg+xml,' + encodeURIComponent(svg);
-      }
-      function applyStyle(style) {
-        nameStyle = style;
-        mark.textContent = styles[style][0];
-        mark.dataset.style = style;
-        select.value = style;
-        updateIcon();
-      }
-      try {
-        const saved = localStorage.getItem('akhil-name-style');
-        if (Object.hasOwn(styles, saved)) applyStyle(saved);
-      } catch (_) {}
-      updateIcon();
-      select.addEventListener('change', () => {
-        applyStyle(select.value);
-        status.textContent = nameStyle + ' name style selected';
-        try { localStorage.setItem('akhil-name-style', nameStyle); } catch (_) {}
-      });
-      function apply(color) {
-        current = color;
-        root.dataset.color = color;
-        button.textContent = color + ' ↻';
-        button.setAttribute('aria-label', 'Switch color palette. Current color: ' + color);
-        updateIcon();
-      }
-      try {
-        const saved = localStorage.getItem('akhil-color');
-        if (colors.includes(saved)) apply(saved);
-      } catch (_) { /* The switch also works when browser storage is unavailable. */ }
-      button.addEventListener('click', () => {
-        apply(colors[(colors.indexOf(current) + 1) % colors.length]);
-        status.textContent = current + ' color palette selected';
-        try { localStorage.setItem('akhil-color', current); } catch (_) {}
-      });
-    })();
-  </script>
+(() => {
+  const root = document.documentElement;
+  const colors = ['Blue', 'Purple', 'Terracotta', 'Charcoal', 'Green'];
+  const layouts = ['Studio', 'Journal', 'Terminal'];
+  const colorButton = document.getElementById('color-toggle');
+  const layoutButton = document.getElementById('layout-toggle');
+  const status = document.getElementById('color-status');
+  let color = 'Blue', layout = 'Studio';
+  try {
+    const savedColor = localStorage.getItem('akhil-color');
+    const savedLayout = localStorage.getItem('akhil-layout');
+    if (colors.includes(savedColor)) color = savedColor;
+    if (layouts.includes(savedLayout)) layout = savedLayout;
+  } catch (_) {}
+  function render() {
+    root.dataset.color = color;
+    root.dataset.layout = layout;
+    colorButton.textContent = color + ' ↻';
+    layoutButton.textContent = 'Style: ' + layout + ' ↻';
+    colorButton.setAttribute('aria-label', 'Switch color palette. Current color: ' + color);
+    layoutButton.setAttribute('aria-label', 'Switch website design. Current design: ' + layout);
+    const accent = getComputedStyle(root).getPropertyValue('--accent').trim();
+    const paper = getComputedStyle(root).getPropertyValue('--paper').trim();
+    const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="' + accent + '"/><text x="32" y="41" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="25" fill="' + paper + '">akt.</text></svg>';
+    document.getElementById('site-icon').href = 'data:image/svg+xml,' + encodeURIComponent(svg);
+    document.querySelector('meta[name="theme-color"]').content = paper;
+  }
+  function save() {
+    try { localStorage.setItem('akhil-color', color); localStorage.setItem('akhil-layout', layout); } catch (_) {}
+  }
+  colorButton.addEventListener('click', () => { color = colors[(colors.indexOf(color) + 1) % colors.length]; render(); save(); status.textContent = color + ' color selected'; });
+  layoutButton.addEventListener('click', () => { layout = layouts[(layouts.indexOf(layout) + 1) % layouts.length]; render(); save(); status.textContent = layout + ' website design selected'; });
+  render();
+})();
+</script>
 </body>
 </html>
 
