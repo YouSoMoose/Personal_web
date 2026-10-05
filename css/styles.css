@@ -60,7 +60,7 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20
 footer div { display: flex; gap: 22px; } footer a { text-decoration: none; }
 .skip { position: absolute; top: -60px; left: 15px; padding: 10px; background: var(--paper); z-index: 5; } .skip:focus { top: 10px; }
 .fireflies { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
-.fireflies i { position: absolute; left: var(--x); top: var(--y); width: 5px; height: 5px; border-radius: 50%; background: #d7ab4d; box-shadow: 0 0 8px 3px #d7ab4d55, 0 0 20px 7px #d7ab4d22; opacity: .45; animation: drift var(--duration) ease-in-out var(--delay) infinite alternate; }
+.fireflies i { position: absolute; left: var(--x); top: var(--y); width: 5px; height: 5px; border-radius: 50%; background: #719bd0; box-shadow: 0 0 8px 3px #719bd055, 0 0 20px 7px #719bd022; opacity: .45; animation: drift var(--duration) ease-in-out var(--delay) infinite alternate; }
 .fireflies i:nth-child(3n) { width: 7px; height: 7px; }
 .fireflies i:nth-child(4n) { width: 4px; height: 4px; }
 @keyframes drift { 0% { transform: translate(0,0); opacity: .25; } 35% { opacity: .85; } 65% { opacity: .35; } 100% { transform: translate(45px,-75px); opacity: .65; } }
@@ -80,3 +80,4 @@ footer div { display: flex; gap: 22px; } footer a { text-decoration: none; }
   .contact h2 { font-size: 36px; } .contact { padding: 50px 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .fireflies i { animation: none; opacity: .45; } }
+
